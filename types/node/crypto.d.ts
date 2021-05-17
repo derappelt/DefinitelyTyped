@@ -177,14 +177,14 @@ declare module 'crypto' {
         update(data: BinaryLike): Hash;
         update(data: string, input_encoding: Encoding): Hash;
         digest(): Buffer;
-        digest(encoding: BinaryToTextEncoding): string;
+        digest(encoding: Encoding): string;
     }
     class Hmac extends stream.Transform {
         private constructor();
         update(data: BinaryLike): Hmac;
         update(data: string, input_encoding: Encoding): Hmac;
         digest(): Buffer;
-        digest(encoding: BinaryToTextEncoding): string;
+        digest(encoding: Encoding): string;
     }
 
     type KeyObjectType = 'secret' | 'public' | 'private';
